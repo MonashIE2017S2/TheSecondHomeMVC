@@ -58,3 +58,7 @@ C:\Users\Yang-Deng\Desktop\the2homeMVC\MvcPWy\bin\Twilio.Api.xml
 C:\Users\Yang-Deng\Desktop\the2homeMVC\MvcPWy\obj\Debug\TheSecondHomeMVC.csproj.CoreCompileInputs.cache
 C:\Users\Yang-Deng\Desktop\the2homeMVC\MvcPWy\obj\Debug\MvcPWy.dll
 C:\Users\Yang-Deng\Desktop\the2homeMVC\MvcPWy\obj\Debug\MvcPWy.pdb
+C:\Users\Yang-Deng\Desktop\the2homeMVC\MvcPWy\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Yang-Deng\Desktop\the2homeMVC\MvcPWy\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\Yang-Deng\Desktop\the2homeMVC\MvcPWy\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\Yang-Deng\Desktop\the2homeMVC\MvcPWy\bin\Microsoft.AspNet.SignalR.SystemWeb.xml

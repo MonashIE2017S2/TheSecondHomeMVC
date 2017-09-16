@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/Site.css")
-    @Styles.Render("~/Content/bootstrap.css")
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     @Scripts.Render("~/Scripts/modernizr")
     @Scripts.Render("~/Scripts/jquery")
     @Scripts.Render("~/Scripts/bootstrap")
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/Content/Animation.css">
     <script src="~/Scripts/jquery-3.2.1.js"></script>
     <script src="~/Scripts/bootstrap.js"></script>
@@ -122,7 +121,7 @@
 @*
                         <a href="~/EducationalOutcome.cshtml" class="btn btn-primary"><i class="fa fa-bar-chart"></i>Educational Outcomes</a>
 *@
-                        <li class="btn btn-primary" style=""><i class="fa fa-bar-chart"></i>@Html.ActionLink("EducationalOutcomes", "EducationalOutcomes", "Home")</li>
+                        <li class="btn btn-primary" style="color: white"><i class="fa fa-bar-chart"></i>@Html.ActionLink("EducationalOutcomes", "EducationalOutcomes", "Home", new {@style= "color: white" })</li>
                     </ol>
                 </div>
                 @*  <div class="row">
@@ -165,19 +164,28 @@
                 <div class="row">
                     <hr class="hr-danger" />
                     <ol class="breadcrumb bread-danger">
+@*
                         <a href="~/IdentifyStudent.cshtml" class="btn btn-danger"><i class="fa fa-flag"></i> Identify Vulnerable Kids </a>
+*@
+                        <li class="btn btn-danger"><i class="fa fa-flag"></i>@Html.ActionLink("Identify Vulnerable Kids", "IdentifyVulnerableKids", "Home", new {@style= "color: white" })</li>
                     </ol>
                 </div>
                 <div class="row">
                     <hr class="hr-success" />
                     <ol class="breadcrumb bread-success">
+                        @*
                         <a href="~/TeacherHelper.cshtml" class="btn btn-success"><i class="fa fa-paw"></i>Support Services</a>
+*@
+                        <li class="btn btn-success"><i class="fa fa-paw"></i>@Html.ActionLink("Support Services", "SupportServices", "Home", new {@style= "color: white" })</li>
                     </ol>
                 </div>
                 <div class="row">
                     <hr class="hr-info" />
                     <ol class="breadcrumb bread-purple">
+                        @*
                         <a href="~/ParentsCommunication2.cshtml" class="btn btn-info"><i class="fa fa-envelope"></i> Email Helper</a>
+*@
+                        <li class="btn btn-info"><i class="fa fa-envelope"></i>@Html.ActionLink("Email Helper", "EmailHelper", "Home", new {@style= "color: white" })</li>
                     </ol>
                 </div>
                 <div class="row">
@@ -188,7 +196,7 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
                                         <h2 class="modal-title" id="myModalLabel">
                                             Code of Conduct
                                         </h2>
@@ -207,7 +215,7 @@
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary" onclick="location.href = 'ChatHub.cshtml';">Yes</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">@Html.ActionLink("Yes", "ChatHub", "Home", new { @style = "color: white" })</button>
                                     </div>
                                 </div>
                             </div>

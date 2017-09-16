@@ -33,5 +33,35 @@ namespace MvcPWy.Controllers
        
             return View();
         }
+
+        public ActionResult IdentifyVulnerableKids()
+        {
+            ViewBag.Message = "Identify Vulnerable Kids Page.";
+
+            return View();
+        }
+
+        public ActionResult SupportServices()
+        {
+            ViewBag.Message = "Support Services Page.";
+
+            return View();
+        }
+
+        [Authorize]
+        public ActionResult EmailHelper()
+        {
+            ViewBag.Message = "Email Helper Page.";
+
+            return View();
+        }
+
+        [Authorize]
+        public ActionResult ChatHub()
+        {
+            ViewBag.Message = "ChatHub Page.";
+
+            return View();
+        }
     }
 }
