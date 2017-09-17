@@ -1,0 +1,459 @@
+﻿@{
+    ViewBag.Title = "Educational Outcomes";
+}
+
+<head>
+    <script src="~/Scripts/Chart.js"></script>
+    <script src="~/Scripts/Modals.js"></script>
+</head>
+<br>
+<div class="panel panel-primary">
+    <div class="panel-heading"></div>
+    <div class="panel-body" style="height: 430px; word-break: break-all; overflow-y: scroll;">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div class="row">
+                    <br>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img alt="300x200" src="~/Image/census.jpg" />
+                            <div class="caption">
+                                <h3>
+                                    Census Data of Homelessness
+                                </h3>
+                                <p>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#myModal1">
+                                        Check
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title" id="myModalLabel">Census Data Diagram 1</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <canvas id="myChart" width="1000" height="700"></canvas>
+                                                    <script>
+                                                        var ctx = document.getElementById("myChart").getContext('2d');
+                                                        Chart.defaults.global.defaultFontFamily = "Lato";
+                                                        Chart.defaults.global.defaultFontSize = 12;
+                                                        var myChart = new Chart(ctx,
+                                                            {
+                                                                type: 'bar',
+                                                                data: {
+                                                                    labels: [
+                                                                        "Domestic Violence", "Financial Difficulties", "Housing Crisis",
+                                                                        "Inappropriate Dwellings", "Relationship Issues", "Accommodation Issues",
+                                                                        "Health Issues", "Custody Transition", "Itinerant", "Lack of support", "Other"
+                                                                    ],
+                                                                    datasets: [
+                                                                        {
+                                                                            label: '# Total 105237 Homelessness',
+                                                                            data: [
+                                                                                25257, 21047, 16838, 11576, 8419, 5262, 4209, 2105, 1052, 1052, 8419
+                                                                            ],
+                                                                            backgroundColor: [
+                                                                                'rgba(255, 99, 132, 0.2)',
+                                                                                'rgba(54, 162, 235, 0.2)',
+                                                                                'rgba(255, 206, 86, 0.2)',
+                                                                                'rgba(75, 192, 192, 0.2)',
+                                                                                'rgba(153, 102, 255, 0.2)',
+                                                                                'rgba(255, 159, 64, 0.2)',
+                                                                                'rgba(255, 99, 132, 0.2)',
+                                                                                'rgba(54, 162, 235, 0.2)',
+                                                                                'rgba(255, 206, 86, 0.2)',
+                                                                                'rgba(75, 192, 192, 0.2)',
+                                                                                'rgba(153, 102, 255, 0.2)'
+                                                                            ],
+                                                                            borderColor: [
+                                                                                'rgba(255,99,132,1)',
+                                                                                'rgba(54, 162, 235, 1)',
+                                                                                'rgba(255, 206, 86, 1)',
+                                                                                'rgba(75, 192, 192, 1)',
+                                                                                'rgba(153, 102, 255, 1)',
+                                                                                'rgba(255, 159, 64, 1)',
+                                                                                'rgba(255, 99, 132, 1)',
+                                                                                'rgba(54, 162, 235, 1)',
+                                                                                'rgba(255, 206, 86, 1)',
+                                                                                'rgba(75, 192, 192, 1)',
+                                                                                'rgba(153, 102, 255, 1)'
+                                                                            ],
+                                                                            borderWidth: 4
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                options: {
+                                                                    scales: {
+                                                                        yAxes: [
+                                                                            {
+                                                                                ticks: {
+                                                                                    beginAtZero: true
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            });
+                                                    </script>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default btn-prev">Prev</button>
+                                                    <button type="button" class="btn btn-default btn-next">Next</button>
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title" id="myModalLabel">Census Data Diagram 2</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <canvas id="polarAreaChart" width="1000" height="700"></canvas>
+                                                    <script>
+                                                        var ctx = document.getElementById("polarAreaChart").getContext('2d');
+                                                        Chart.defaults.global.defaultFontFamily = "Lato";
+                                                        Chart.defaults.global.defaultFontSize = 12;
+                                                        var birdsData = {
+                                                            labels: [
+                                                                "Total Homelessness", "Children under 18", "Children under 12", "Children under 10",
+                                                                "Children sleeping out"
+                                                            ],
+                                                            datasets: [
+                                                                {
+                                                                    data: [105237, 28414, 17845, 16838, 402],
+                                                                    backgroundColor: [
+                                                                        "rgba(255, 0, 0, 0.6)",
+                                                                        "rgba(0, 255,200, 0.6)",
+                                                                        "rgba(200, 0, 200, 0.6)",
+                                                                        "rgba(0, 255, 0, 0.6)"
+                                                                    ],
+                                                                    borderColor: "rgba(0, 0, 0, 0.8)"
+                                                                }
+                                                            ]
+                                                        };
+
+                                                        var chartOptions = {
+                                                            startAngle: -Math.PI / 4,
+                                                            legend: {
+                                                                position: 'top'
+                                                            },
+                                                            animation: {
+                                                                animateRotate: true
+                                                            }
+                                                        };
+
+                                                        var polarAreaChart = new Chart(ctx,
+                                                            {
+                                                                type: 'polarArea',
+                                                                data: birdsData,
+                                                                options: chartOptions
+                                                            });
+                                                    </script>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default btn-prev">Prev</button>
+                                                    <button type="button" class="btn btn-default btn-next">Next</button>
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title" id="myModalLabel">Census Data Diagram 3</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <canvas id="donutChart2" width="1000" height="700"></canvas>
+                                                    <script>
+                                                        var oilCanvas = document.getElementById("donutChart2");
+
+                                                        Chart.defaults.global.defaultFontFamily = "Lato";
+                                                        Chart.defaults.global.defaultFontSize = 12;
+
+                                                        var oilData = {
+                                                            labels: [
+                                                                "Aboriginal and Torres Strait Islander",
+                                                                "non-Aboriginal or Torres Strait Islanders"
+                                                            ],
+                                                            datasets: [
+                                                                {
+                                                                    data: [26744, 78493],
+                                                                    backgroundColor: [
+                                                                        "#FF6384",
+                                                                        "#63FF84"
+                                                                    ],
+                                                                    borderColor: "white",
+                                                                    borderWidth: 1
+                                                                }
+                                                            ]
+                                                        };
+
+                                                        var chartOptions = {
+                                                            rotation: -Math.PI,
+                                                            cutoutPercentage: 30,
+                                                            circumference: Math.PI,
+                                                            legend: {
+                                                                position: 'top'
+                                                            },
+                                                            animation: {
+                                                                animateRotate: false,
+                                                                animateScale: true
+                                                            }
+                                                        };
+
+                                                        var pieChart = new Chart(oilCanvas,
+                                                            {
+                                                                type: 'doughnut',
+                                                                data: oilData,
+                                                                options: chartOptions
+                                                            });
+                                                    </script>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default btn-prev">Prev</button>
+                                                    <button type="button" class="btn btn-default btn-next">Next</button>
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title" id="myModalLabel">Census Data Diagram 4</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <canvas id="donutChart" width="1000" height="700"></canvas>
+                                                    <script>
+                                                        var oilCanvas = document.getElementById("donutChart");
+
+                                                        Chart.defaults.global.defaultFontFamily = "Lato";
+                                                        Chart.defaults.global.defaultFontSize = 12;
+
+                                                        var oilData = {
+                                                            labels: [
+                                                                "ACT",
+                                                                "NSW",
+                                                                "NT",
+                                                                "QLD",
+                                                                "SA",
+                                                                "TAS",
+                                                                "VIC",
+                                                                "WA"
+                                                            ],
+                                                            datasets: [
+                                                                {
+                                                                    data: [1758, 28191, 15479, 19831, 5985, 1579, 22773, 9595],
+                                                                    backgroundColor: [
+                                                                        "#FF6384",
+                                                                        "#63FF84",
+                                                                        "#40beff",
+                                                                        "#c034ff",
+                                                                        "#6384FF",
+                                                                        "#ffbe4f",
+                                                                        "#ff24a7",
+                                                                        "#8463FF",
+                                                                        "#ff2e2c"
+                                                                    ],
+                                                                    borderColor: "white",
+                                                                    borderWidth: 1
+                                                                }
+                                                            ]
+                                                        };
+
+                                                        var chartOptions = {
+                                                            rotation: -Math.PI,
+                                                            cutoutPercentage: 30,
+                                                            circumference: Math.PI,
+                                                            legend: {
+                                                                position: 'top'
+                                                            },
+                                                            animation: {
+                                                                animateRotate: false,
+                                                                animateScale: true
+                                                            }
+                                                        };
+
+                                                        var pieChart = new Chart(oilCanvas,
+                                                            {
+                                                                type: 'doughnut',
+                                                                data: oilData,
+                                                                options: chartOptions
+                                                            });
+                                                    </script>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default btn-prev">Prev</button>
+                                                    <button type="button" class="btn btn-default btn-next">Next</button>
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <script>
+                                                        $("div[id^='myModal']").each(function () {
+
+                                                            var currentModal = $(this);
+
+                                                            //click next
+                                                            currentModal.find('.btn-next').click(function () {
+                                                                currentModal.modal('hide');
+                                                                currentModal.closest("div[id^='myModal']").nextAll("div[id^='myModal']").first().modal('show');
+                                                            });
+
+                                                            //click prev
+                                                            currentModal.find('.btn-prev').click(function () {
+                                                                currentModal.modal('hide');
+                                                                currentModal.closest("div[id^='myModal']").prevAll("div[id^='myModal']").first().modal('show');
+                                                            });
+
+                                                        });
+
+                                    </script>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img alt="300x200" src="~/Image/Health.jpg" />
+                            <div class="caption">
+                                <h3>
+                                    Health Situation of Youth Homelessness
+                                </h3>
+                                <p>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#my2Modal1">
+                                        Check
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="my2Modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title" id="myModalLabel2">Health Situation Comparison</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <canvas id="radarChart" width="1000" height="700"></canvas>
+                                                    <script>
+                                                        var ctx = document.getElementById("radarChart").getContext('2d');
+                                                        Chart.defaults.global.defaultFontFamily = "Lato";
+                                                        Chart.defaults.global.defaultFontSize = 12;
+                                                        var marksData = {
+                                                            labels: [
+                                                                "Developmental Delays", "Nutritional Deficits", "Asthma",
+                                                                "Infectious Illness", "Gastrointestinal Problems",
+                                                                "Anxiety and depression"
+                                                            ],
+                                                            datasets: [
+                                                                {
+                                                                    label: "Health Condition of Normal Children",
+                                                                    backgroundColor: "rgba(200,0,0,0.2)",
+                                                                    data: [100, 90, 80, 80, 90, 90]
+                                                                }, {
+                                                                    label: "Health Condition of Children Experiencing Homelessness",
+                                                                    backgroundColor: "rgba(0,0,200,0.2)",
+                                                                    data: [70, 60, 70, 60, 70, 50]
+                                                                }
+                                                            ]
+                                                        };
+                                                        var radarChart = new Chart(ctx,
+                                                            {
+                                                                type: 'radar',
+                                                                data: marksData
+                                                            });
+                                                    </script>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img alt="300x200" src="~/Image/Education.jpg" />
+                            <div class="caption">
+                                <h3>
+                                    Education Situation of Youth Homelessness
+                                </h3>
+                                <p>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#my3Modal1">
+                                        Check
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="my3Modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title" id="myModalLabel2">Education Situation Comparison</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <canvas id="radarChart2" width="1000" height="700"></canvas>
+                                                    <script>
+                                                        var ctx = document.getElementById("radarChart2").getContext('2d');
+                                                        Chart.defaults.global.defaultFontFamily = "Lato";
+                                                        Chart.defaults.global.defaultFontSize = 12;
+                                                        var marksData = {
+                                                            labels: [
+                                                                "Emotion Isolation", "Establishing and Maintaining Friendships",
+                                                                "Discrimination in the schoolyard", "Suffering an amount fo stress",
+                                                                "Reduced concentration skills", "Academic and learning delays",
+                                                                "Absenteeism", "Dropout"
+                                                            ],
+                                                            datasets: [
+                                                                {
+                                                                    label: "Education Condition of Normal Children",
+                                                                    backgroundColor: "rgba(200,0,0,0.2)",
+                                                                    data: [75, 80, 80, 80, 90, 70, 80, 90]
+                                                                }, {
+                                                                    label: "Education Condition of Children Experiencing Homelessness",
+                                                                    backgroundColor: "rgba(0,0,200,0.2)",
+                                                                    data: [55, 70, 75, 75, 70, 70, 70, 40]
+                                                                }
+                                                            ]
+                                                        };
+                                                        var radarChart = new Chart(ctx,
+                                                            {
+                                                                type: 'radar',
+                                                                data: marksData
+                                                            });
+                                                    </script>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

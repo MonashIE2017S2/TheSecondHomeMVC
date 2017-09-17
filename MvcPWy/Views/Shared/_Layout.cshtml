@@ -16,11 +16,11 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <script src="~/Scripts/Modals.js"></script>
     <style>
-        hr {
-            height: 4px;
-            margin-left: 15px;
-            margin-bottom: -3px;
-        }
+         hr {
+             height: 4px;
+             margin-left: 15px;
+             margin-bottom: -3px;
+         }
 
         .hr-warning {
             background-image: -webkit-linear-gradient(left, rgba(210,105,30,.8), rgba(210,105,30,.6), rgba(0,0,0,0));
@@ -82,159 +82,23 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row clearfix">
-            <div class="col-md-2 column">
-                <br>
-                <br>
-                <img alt="200x68" src="~/Image/second-home.jpg" />
-            </div>
-            <div class="col-md-4 column"></div>
-            <div class="col-md-6">
-                <br>
-                <br>
-                @*
-                    <img alt="140x140" src="~/Image/Banner.jpg" width="570" height="80" />
-                *@
-
-                <svg viewBox="0 0 750 130">
-                    <symbol id="s-text">
-                        <text text-anchor="middle" x="50%" y="50%">Keep every kid sheltered~</text>
-                    </symbol>
-                    <g class="g-ants">
-                        <use xlink:href="#s-text" class="text-copy"></use>
-                        <use xlink:href="#s-text" class="text-copy"></use>
-                        <use xlink:href="#s-text" class="text-copy"></use>
-                        <use xlink:href="#s-text" class="text-copy"></use>
-                        <use xlink:href="#s-text" class="text-copy"></use>
-                    </g>
-                </svg>
-            </div>
+    <div class="col-md-1 column">
+    </div>
+    <div class="col-md-10 column">
+        <br>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+                <hr />
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - Team-Y-Nots</p>
+                </footer>
+            </section>
         </div>
-        <div class="row clearfix">
-            <div class="col-md-2 column">
-                <br>
-                <br>
-                <div class="row">
-                    <hr class="hr-primary" />
-                    <ol class="breadcrumb bread-primary">
-@*
-                        <a href="~/EducationalOutcome.cshtml" class="btn btn-primary"><i class="fa fa-bar-chart"></i>Educational Outcomes</a>
-*@
-                        <li class="btn btn-primary" style="color: white"><i class="fa fa-bar-chart"></i>@Html.ActionLink("EducationalOutcomes", "EducationalOutcomes", "Home", new {@style= "color: white" })</li>
-                    </ol>
-                </div>
-                @*  <div class="row">
-                        <hr class="hr-danger" />
-                        <ol class="breadcrumb bread-danger">
-                            <a id="modal-137380" href="#modal-container-137380" data-toggle="modal" class="btn btn-danger"> <i class="fa fa-flag"></i> Identify Vulnerable Kids</a>
-                            <div class="modal fade" id="modal-container-137380" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
-                                            <h2 class="modal-title" id="myModalLabel">
-                                                Introduction
-                                            </h2>
-                                        </div>
-                                        <div class="modal-body">
-                                            <ul>
-                                                <li>
-                                                    This quiz is design for the user to identify the kids who will experience homelessness.
-                                                </li>
-                                                <li>
-                                                    Your answer will be recorded and analyzed.
-                                                </li>
-                                                <li>
-                                                    We also ensure that your privacy will not be leaked.
-                                                </li>
-                                                <li>
-                                                    Once your answers uploaded is identified as high-risk target, we will give you the opportunity to report this situation.
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary" onclick="location.href = 'IdentifyStudent.cshtml';">Yes, I know it</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </ol>
-                    </div>*@
-                <div class="row">
-                    <hr class="hr-danger" />
-                    <ol class="breadcrumb bread-danger">
-@*
-                        <a href="~/IdentifyStudent.cshtml" class="btn btn-danger"><i class="fa fa-flag"></i> Identify Vulnerable Kids </a>
-*@
-                        <li class="btn btn-danger"><i class="fa fa-flag"></i>@Html.ActionLink("Identify Vulnerable Kids", "IdentifyVulnerableKids", "Home", new {@style= "color: white" })</li>
-                    </ol>
-                </div>
-                <div class="row">
-                    <hr class="hr-success" />
-                    <ol class="breadcrumb bread-success">
-                        @*
-                        <a href="~/TeacherHelper.cshtml" class="btn btn-success"><i class="fa fa-paw"></i>Support Services</a>
-*@
-                        <li class="btn btn-success"><i class="fa fa-paw"></i>@Html.ActionLink("Support Services", "SupportServices", "Home", new {@style= "color: white" })</li>
-                    </ol>
-                </div>
-                <div class="row">
-                    <hr class="hr-info" />
-                    <ol class="breadcrumb bread-purple">
-                        @*
-                        <a href="~/ParentsCommunication2.cshtml" class="btn btn-info"><i class="fa fa-envelope"></i> Email Helper</a>
-*@
-                        <li class="btn btn-info"><i class="fa fa-envelope"></i>@Html.ActionLink("Email Helper", "EmailHelper", "Home", new {@style= "color: white" })</li>
-                    </ol>
-                </div>
-                <div class="row">
-                    <hr class="hr-warning" />
-                    <ol class="breadcrumb bread-warning">
-                        <a id="modal-2" href="#modal-container-2" data-toggle="modal" class="btn btn-warning"> <i class="fa fa-comments"></i> Teachers' Chat Hub</a>
-                        <div class="modal fade" id="modal-container-2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                                        <h2 class="modal-title" id="myModalLabel">
-                                            Code of Conduct
-                                        </h2>
-                                    </div>
-                                    <div class="modal-body">
-                                        <ul>
-                                            <li>
-                                                This channel is made for communication among teachers only.
-                                            </li>
-                                            <li>
-                                                Leaking personal details of children is forbidden.
-                                            </li>
-                                            <li>
-                                                We recommend you to use pseudonym in this channel.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">@Html.ActionLink("Yes", "ChatHub", "Home", new { @style = "color: white" })</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </ol>
-                </div>
-            </div>
-            <div class="col-md-10 column">
-                <br>
-                <br>
-                <div id="body">
-                    @RenderSection("featured", required: false)
-                    <section class="content-wrapper main-content clear-fix">
-                        @RenderBody()
-                    </section>
-                </div>
-                @RenderSection("Scripts", required: false)
-            </div>
-        </div>
+        @RenderSection("Scripts", required: false)
+    </div>
+    <div class="col-md-1 column">
     </div>
 
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -248,9 +112,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("The Second Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("The Second Home", "Index", "Home", new { area = "" }, new { @style = "color: white; " })</li>
+                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @style = "color: white; " })</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @style = "color: white; " })</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

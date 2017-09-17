@@ -6,14 +6,15 @@ namespace MvcPWy.Controllers
     {
         public ActionResult Index()
         {
+/*
             ViewBag.Link = TempData["ViewBagLink"];
+*/
             return View();
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
+            ViewBag.Message = "About Page of this Application.";
             return View();
         }
 

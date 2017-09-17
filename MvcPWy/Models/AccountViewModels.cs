@@ -68,6 +68,7 @@ namespace MvcPWy.Models
     {
         [Required]
         [EmailAddress]
+        [RegularExpression("^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[edua]{2,7}$", ErrorMessage = "E-mail is not valid, you need use your Edu Email.")]
         [Display(Name = "Email")]
         public string Email { get; set; }
 

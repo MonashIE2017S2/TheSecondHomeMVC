@@ -13,6 +13,8 @@ using Microsoft.Owin.Security;
 using MvcPWy.Models;
 using SendGrid;
 using Twilio;
+using Twilio.Types;
+using Twilio.Rest.Api.V2010.Account;
 
 namespace MvcPWy
 {
@@ -64,21 +66,27 @@ namespace MvcPWy
 
     public class SmsService : IIdentityMessageService
     {
-        public Task SendAsync(IdentityMessage message)
+        public async Task SendAsync(IdentityMessage message)
         {
-            var Twilio = new TwilioRestClient(
-                ConfigurationManager.AppSettings["TwilioSid"],
-                ConfigurationManager.AppSettings["TwilioToken"]
-            );
-            var result = Twilio.SendMessage(
-                ConfigurationManager.AppSettings["TwilioFromPhone"],
-                message.Destination, message.Body);
+            string accountSid = ConfigurationManager.AppSettings["SMSAccountIdentification"];
 
-            // Status is one of Queued, Sending, Sent, Failed or null if the number is not valid
-            Trace.TraceInformation(result.Status);
+            string authToken = ConfigurationManager.AppSettings["SMSAccountPassword"];
 
-            // Twilio doesn't currently have an async API, so return success.
-            return Task.FromResult(0);
+            string fromNumber = ConfigurationManager.AppSettings["SMSAccountFrom"];
+
+            // Initialize the Twilio client
+
+            TwilioClient.Init(accountSid, authToken);
+
+            MessageResource result = MessageResource.Create(
+
+                from: new PhoneNumber(fromNumber),
+
+                to: new PhoneNumber(message.Destination),
+
+                body: message.Body);
+
+
         }
     }
 
