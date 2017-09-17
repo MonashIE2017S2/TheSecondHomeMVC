@@ -63,4 +63,3 @@ C:\Users\Yang-Deng\Desktop\the2homeMVC\MvcPWy\obj\Debug\TheSecondHomeMVC.csproj.
 C:\Users\Yang-Deng\Desktop\the2homeMVC\MvcPWy\obj\Debug\MvcPWy.dll
 C:\Users\Yang-Deng\Desktop\the2homeMVC\MvcPWy\obj\Debug\MvcPWy.pdb
 C:\Users\Yang-Deng\Desktop\the2homeMVC\MvcPWy\bin\WebGrease.dll
-C:\Users\Yang-Deng\Desktop\the2homeMVC\MvcPWy\obj\Debug\TheSecondHomeMVC.csprojResolveAssemblyReference.cache

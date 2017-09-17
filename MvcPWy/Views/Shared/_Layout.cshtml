@@ -42,6 +42,10 @@
             background-image: -webkit-linear-gradient(left, rgba(86,192,224,.8), rgba(86,192,224,.6), rgba(0,0,0,0));
         }
 
+         .hr-doc {
+             background-image: -webkit-linear-gradient(left, rgba(0,0,0,.8), rgba(0,0,0,.6), rgba(0,0,0,0));
+         }
+
         .btn-primary {
             padding: 10px 10px;
             text-align: left;
@@ -58,7 +62,7 @@
         }
 
         .btn-info {
-            padding: 10px 39px;
+            padding: 10px 40px;
             text-align: left;
         }
 
@@ -79,6 +83,54 @@
             font-size: 12px;
             border-radius: 3px;
         }
+
+        .btn-doc {
+            color: #fff;
+            background-color: rgba(0,0,0,0.6);
+            border-color: rgba(0,0,0,0.6);
+            padding: 10px 47px;
+            text-align: left;
+        }
+            .btn-doc:hover,
+            .btn-doc:focus,
+            .btn-doc.focus,
+            .btn-doc:active,
+            .btn-doc.active,
+            .open > .dropdown-toggle.btn-primary {
+                color: #fff;
+                background-color: rgba(0,0,0,0.4);
+                border-color: rgba(0,0,0,0.4);
+            }
+         .btn-doc:active,
+         .btn-doc.active,
+         .open > .dropdown-toggle.btn-primary {
+             background-image: none;
+         }
+            .btn-doc.disabled,
+            .btn-doc[disabled],
+            fieldset[disabled] .btn-doc,
+            .btn-doc.disabled:hover,
+            .btn-doc[disabled]:hover,
+            fieldset[disabled] .btn-doc:hover,
+            .btn-doc.disabled:focus,
+            .btn-doc[disabled]:focus,
+            fieldset[disabled] .btn-doc:focus,
+            .btn-doc.disabled.focus,
+            .btn-doc[disabled].focus,
+            fieldset[disabled] .btn-doc.focus,
+            .btn-doc.disabled:active,
+            .btn-doc[disabled]:active,
+            fieldset[disabled] .btn-doc:active,
+            .btn-doc.disabled.active,
+            .btn-doc[disabled].active,
+            fieldset[disabled] .btn-doc.active {
+                background-color: rgba(0,0,0,0.4);
+                border-color: rgba(0,0,0,0.4);
+            }
+            .btn-doc .badge {
+                color: rgba(0,0,0,0.4);
+                background-color: #fff;
+            }
     </style>
 </head>
 <body>
@@ -92,7 +144,9 @@
                 @RenderBody()
                 <hr />
                 <footer>
+@*
                     <p>&copy; @DateTime.Now.Year - Team-Y-Nots</p>
+*@
                 </footer>
             </section>
         </div>

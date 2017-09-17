@@ -18,9 +18,14 @@ namespace MvcPWy.Controllers
             return View();
         }
 
-/*
-        [Authorize]
-*/
+        public ActionResult EmailHelp()
+        {
+            ViewBag.Message = "Email Help Page.";
+            return View();
+        }
+        /*
+                [Authorize]
+        */
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="row clearfix">
-        <div class="col-md-2 column">
+        <div class="col-md-2">
             <br>
             <div class="row">
                 <hr class="hr-primary" />
@@ -31,43 +31,6 @@
                     <li class="btn btn-primary" style="color: white"><i class="fa fa-bar-chart"></i>@Html.ActionLink("EducationalOutcomes", "EducationalOutcomes", "Home", new { @style = "color: white" })</li>
                 </ol>
             </div>
-            @*  <div class="row">
-                    <hr class="hr-danger" />
-                    <ol class="breadcrumb bread-danger">
-                        <a id="modal-137380" href="#modal-container-137380" data-toggle="modal" class="btn btn-danger"> <i class="fa fa-flag"></i> Identify Vulnerable Kids</a>
-                        <div class="modal fade" id="modal-container-137380" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
-                                        <h2 class="modal-title" id="myModalLabel">
-                                            Introduction
-                                        </h2>
-                                    </div>
-                                    <div class="modal-body">
-                                        <ul>
-                                            <li>
-                                                This quiz is design for the user to identify the kids who will experience homelessness.
-                                            </li>
-                                            <li>
-                                                Your answer will be recorded and analyzed.
-                                            </li>
-                                            <li>
-                                                We also ensure that your privacy will not be leaked.
-                                            </li>
-                                            <li>
-                                                Once your answers uploaded is identified as high-risk target, we will give you the opportunity to report this situation.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary" onclick="location.href = 'IdentifyStudent.cshtml';">Yes, I know it</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </ol>
-                </div>*@
             <div class="row">
                 <hr class="hr-danger" />
                 <ol class="breadcrumb bread-danger">
@@ -129,8 +92,21 @@
                     </div>
                 </ol>
             </div>
+            <div class="row">
+                <hr class="hr-doc" />
+                <ol class="breadcrumb bread-doc">
+                    @*
+                        <a href="~/ParentsCommunication2.cshtml" class="btn btn-info"><i class="fa fa-envelope"></i> Email Helper</a>
+                    *@
+                    <li class="btn btn-doc"><i class="fa fa-file-pdf-o"></i>@Html.ActionLink("Doc Helper", "EmailHelper", "Home", new { @style = "color: white" })</li>
+                </ol>
+            </div>
         </div>
-        <div class="col-md-10 column">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-9">
+            <br>
+            <br>
             <br>
             <br>
             <div id="body">
@@ -165,7 +141,7 @@
                                         Children under 18 constitutes 27% of homeless in Australia
                                     </h3>
                                     <p>
-                                        <button class="btn btn-primary btn-large" onclick="window.location.href='http://the-second-home.com/EducationalOutcome.cshtml'"><i class="fa fa-coffee" aria-hidden="true"></i> Click Here to know more</button>
+                                        <button class="btn btn-primary btn-large" onclick="window.location.href = 'http://the-second-home.com/EducationalOutcome.cshtml'"><i class="fa fa-coffee" aria-hidden="true"></i> Click Here to know more</button>
                                     </p>
                                 </div>
                             </div>
@@ -177,7 +153,7 @@
                                         Family Violence is the single biggest cause of homelessness in Australia
                                     </h3>
                                     <p>
-                                        <button class="btn btn-primary btn-large" onclick="window.location.href='http://the-second-home.com/EducationalOutcome.cshtml'"><i class="fa fa-coffee" aria-hidden="true"></i> Click Here to know more</button>
+                                        <button class="btn btn-primary btn-large" onclick="window.location.href = 'http://the-second-home.com/EducationalOutcome.cshtml'"><i class="fa fa-coffee" aria-hidden="true"></i> Click Here to know more</button>
                                     </p>
                                 </div>
                             </div>
