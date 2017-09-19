@@ -193,11 +193,17 @@
     </Content>
     <Content Include="Content\about.css" />
     <Content Include="Content\Animation.css" />
+    <Content Include="Content\AnimationLogo.css" />
+    <Content Include="Content\BGbird.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\popup.css" />
+    <Content Include="Content\Slides.css" />
+    <Content Include="Content\Text.css" />
+    <Content Include="Content\Typing.css" />
+    <Content Include="Content\Welcome.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -219,14 +225,19 @@
     <Content Include="Image\youth3.jpg" />
     <Content Include="Image\youth4.jpg" />
     <Content Include="Image\youthhead.jpg" />
+    <Content Include="Scripts\AnimationLogo.js" />
+    <Content Include="Scripts\BGbird.js" />
     <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile2.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile3.pubxml" />
     <None Include="Properties\PublishProfiles\MvcP.pubxml" />
     <None Include="Properties\PublishProfiles\MvcPWy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -247,7 +258,9 @@
     <Content Include="Scripts\quiz.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\Slides.js" />
     <Content Include="Scripts\survey.jquery.js" />
+    <Content Include="Scripts\Welcome.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

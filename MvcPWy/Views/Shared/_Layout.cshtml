@@ -15,12 +15,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css">
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <script src="~/Scripts/Modals.js"></script>
+    <link rel="stylesheet" href="~/Content/BGbird.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <style>
-         hr {
-             height: 4px;
-             margin-left: 15px;
-             margin-bottom: -3px;
-         }
+        hr {
+            height: 4px;
+            margin-left: 15px;
+            margin-bottom: -3px;
+        }
 
         .hr-warning {
             background-image: -webkit-linear-gradient(left, rgba(210,105,30,.8), rgba(210,105,30,.6), rgba(0,0,0,0));
@@ -42,9 +44,9 @@
             background-image: -webkit-linear-gradient(left, rgba(86,192,224,.8), rgba(86,192,224,.6), rgba(0,0,0,0));
         }
 
-         .hr-doc {
-             background-image: -webkit-linear-gradient(left, rgba(0,0,0,.8), rgba(0,0,0,.6), rgba(0,0,0,0));
-         }
+        .hr-doc {
+            background-image: -webkit-linear-gradient(left, rgba(170, 21, 238, 0.8), rgba(170,21,238,.6), rgba(0,0,0,0));
+        }
 
         .btn-primary {
             padding: 10px 10px;
@@ -86,11 +88,12 @@
 
         .btn-doc {
             color: #fff;
-            background-color: rgba(0,0,0,0.6);
-            border-color: rgba(0,0,0,0.6);
+            background-color: rgba(120,21,238,0.6);
+            border-color: rgba(170,21,238,0.6);
             padding: 10px 47px;
             text-align: left;
         }
+
             .btn-doc:hover,
             .btn-doc:focus,
             .btn-doc.focus,
@@ -98,14 +101,16 @@
             .btn-doc.active,
             .open > .dropdown-toggle.btn-primary {
                 color: #fff;
-                background-color: rgba(0,0,0,0.4);
-                border-color: rgba(0,0,0,0.4);
+                background-color: rgba(120,21,238,0.6);
+                border-color: rgba(120,21,238,0.6);
             }
-         .btn-doc:active,
-         .btn-doc.active,
-         .open > .dropdown-toggle.btn-primary {
-             background-image: none;
-         }
+
+            .btn-doc:active,
+            .btn-doc.active,
+            .open > .dropdown-toggle.btn-primary {
+                background-image: none;
+            }
+
             .btn-doc.disabled,
             .btn-doc[disabled],
             fieldset[disabled] .btn-doc,
@@ -124,19 +129,34 @@
             .btn-doc.disabled.active,
             .btn-doc[disabled].active,
             fieldset[disabled] .btn-doc.active {
-                background-color: rgba(0,0,0,0.4);
-                border-color: rgba(0,0,0,0.4);
+                background-color: rgba(120,21,238,0.6);
+                border-color: rgba(120,21,238,0.6);
             }
+
             .btn-doc .badge {
-                color: rgba(0,0,0,0.4);
+                color: rgba(120,21,238,0.6);
                 background-color: #fff;
             }
     </style>
 </head>
 <body>
-    <div class="col-md-1 column">
+    <canvas id="canv" style="z-index: -10"></canvas>
+    <div class="sky" style="z-index: -1">
+        <div class="clouds" style="z-index: -1">
+            <div class="c1 one"></div>
+            <div class="c1 two"></div>
+            <div class="c1 three"></div>
+            <div class="c1 four"></div>
+            <div class="c2 one"></div>
+            <div class="c2 two"></div>
+            <div class="c2 three"></div>
+            <div class="c2 four"></div>
+        </div>
     </div>
-    <div class="col-md-10 column">
+    <script src="~/Scripts/BGbird.js"></script>
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
         <br>
         <div id="body">
             @RenderSection("featured", required: false)
@@ -144,17 +164,16 @@
                 @RenderBody()
                 <hr />
                 <footer>
-@*
-                    <p>&copy; @DateTime.Now.Year - Team-Y-Nots</p>
-*@
+                    @*
+                        <p>&copy; @DateTime.Now.Year - Team-Y-Nots</p>
+                    *@
                 </footer>
             </section>
         </div>
         @RenderSection("Scripts", required: false)
     </div>
-    <div class="col-md-1 column">
+    <div class="col-md-1">
     </div>
-
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -166,7 +185,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("The Second Home", "Index", "Home", new { area = "" }, new { @style = "color: white; " })</li>
+                    <li>@Html.ActionLink("T-VK | Home", "Index", "Home", new { area = "" }, new { @style = "color: white; " })</li>
                     <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @style = "color: white; " })</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @style = "color: white; " })</li>
                 </ul>
