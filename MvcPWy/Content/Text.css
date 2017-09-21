@@ -1,11 +1,14 @@
 ﻿@import url("https://fonts.googleapis.com/css?family=Oswald:700");
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
 
 
 .square {
-    width: 600px;
-    height: 400px;
+    width: 590px;
+    height: 80px;
     position: relative;
-    top: -100px;
+    bottom: 430px;
+    left: 0px;
+    right: 300px;
     margin: 50vh auto;
     transform: translateY(-50%);
     overflow: hidden;
@@ -18,7 +21,7 @@
     }
 
     .square .line-top {
-        height: 20px;
+        height: 5px;
         width: 100%;
         top: 0;
         left: 0;
@@ -27,14 +30,14 @@
 
     .square .line-right {
         height: 100%;
-        width: 20px;
+        width: 5px;
         top: 0;
         right: 0;
         animation: lineRight 0.8s cubic-bezier(0.05, 0.79, 0.82, 0.31);
     }
 
     .square .line-bottom {
-        height: 20px;
+        height: 5px;
         width: 100%;
         bottom: 0;
         left: 0;
@@ -43,7 +46,7 @@
 
     .square .line-left {
         height: 100%;
-        width: 20px;
+        width: 5px;
         top: 0;
         left: 0;
         transform: translateY(60%);
@@ -61,8 +64,8 @@
         background: none;
         margin: 0;
         padding: 0;
-        font-family: 'Oswald', sans-serif;
-        font-size: 2.80em;
+        font-family: Noto Serif;
+        font-size: 0.90em;
         line-height: 1;
         letter-spacing: 0px;
         text-transform: uppercase;

@@ -1,105 +1,103 @@
-﻿@{
+﻿@model MvcPWy.Models.test
+@{
     ViewBag.Title = "Identify Vulnerable Kids";
 }
 
 <script src="~/Scripts/survey.jquery.js"></script>
 <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<script src="~/Scripts/AnimationLogo.js"></script>
+<link rel="stylesheet" href="~/Content/AnimationLogo.css">
+<link rel="stylesheet" href="~/Content/Slides.css">
+<link rel="stylesheet" href="~/Content/Text.css">
+
 
 <div class="container">
-    <div class="row clearfix">
-        <div class="col-md-2 column">
-            <img alt="200x68" src="~/Image/second-home.jpg" />
+    <div class="col-md-2">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <hr class="hr-danger" />
+            <ol class="breadcrumb bread-danger">
+                <li class="btn btn-danger"><i class="fa fa-flag"></i>@Html.ActionLink("Identify Vulnerable Kids", "IdentifyVulnerableKids", "Home", new { @style = "color: white" })</li>
+            </ol>
         </div>
-        <div class="col-md-4 column"></div>
-        <div class="col-md-6">
-            <svg viewBox="0 0 750 130">
-                <symbol id="s-text">
-                    <text text-anchor="middle" x="50%" y="50%">Keep every kid sheltered~</text>
-                </symbol>
-                <g class="g-ants">
-                    <use xlink:href="#s-text" class="text-copy"></use>
-                    <use xlink:href="#s-text" class="text-copy"></use>
-                    <use xlink:href="#s-text" class="text-copy"></use>
-                    <use xlink:href="#s-text" class="text-copy"></use>
-                    <use xlink:href="#s-text" class="text-copy"></use>
-                </g>
-            </svg>
+        <div class="row">
+            <hr class="hr-primary" />
+            <ol class="breadcrumb bread-primary">
+                <li class="btn btn-primary" style="color: white"><i class="fa fa-bar-chart"></i>@Html.ActionLink("EducationalOutcomes", "EducationalOutcomes", "Home", new { @style = "color: white" })</li>
+            </ol>
         </div>
-    </div>
-    <div class="row clearfix">
-        <div class="col-md-2 column">
-            <br>
-            <div class="row">
-                <hr class="hr-primary" />
-                <ol class="breadcrumb bread-primary">
-                    <li class="btn btn-primary" style="color: white"><i class="fa fa-bar-chart"></i>@Html.ActionLink("EducationalOutcomes", "EducationalOutcomes", "Home", new { @style = "color: white" })</li>
-                </ol>
-            </div>
-            <div class="row">
-                <hr class="hr-danger" />
-                <ol class="breadcrumb bread-danger">
-                    @*
-                        <a href="~/IdentifyStudent.cshtml" class="btn btn-danger"><i class="fa fa-flag"></i> Identify Vulnerable Kids </a>
-                    *@
-                    <li class="btn btn-danger"><i class="fa fa-flag"></i>@Html.ActionLink("Identify Vulnerable Kids", "IdentifyVulnerableKids", "Home", new { @style = "color: white" })</li>
-                </ol>
-            </div>
-            <div class="row">
-                <hr class="hr-success" />
-                <ol class="breadcrumb bread-success">
-                    @*
-                        <a href="~/TeacherHelper.cshtml" class="btn btn-success"><i class="fa fa-paw"></i>Support Services</a>
-                    *@
-                    <li class="btn btn-success"><i class="fa fa-paw"></i>@Html.ActionLink("Support Services", "SupportServices", "Home", new { @style = "color: white" })</li>
-                </ol>
-            </div>
-            <div class="row">
-                <hr class="hr-info" />
-                <ol class="breadcrumb bread-purple">
-                    @*
-                        <a href="~/ParentsCommunication2.cshtml" class="btn btn-info"><i class="fa fa-envelope"></i> Email Helper</a>
-                    *@
-                    <li class="btn btn-info"><i class="fa fa-envelope"></i>@Html.ActionLink("Email Helper", "EmailHelper", "Home", new { @style = "color: white" })</li>
-                </ol>
-            </div>
-            <div class="row">
-                <hr class="hr-warning" />
-                <ol class="breadcrumb bread-warning">
-                    <a id="modal-2" href="#modal-container-2" data-toggle="modal" class="btn btn-warning"> <i class="fa fa-comments"></i> Teachers' Chat Hub</a>
-                    <div class="modal fade" id="modal-container-2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                                    <h2 class="modal-title" id="myModalLabel">
-                                        Code of Conduct
-                                    </h2>
-                                </div>
-                                <div class="modal-body">
-                                    <ul>
-                                        <li>
-                                            This channel is made for communication among teachers only.
-                                        </li>
-                                        <li>
-                                            Leaking personal details of children is forbidden.
-                                        </li>
-                                        <li>
-                                            We recommend you to use pseudonym in this channel.
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">@Html.ActionLink("Yes", "ChatHub", "Home", new { @style = "color: white" })</button>
-                                </div>
+        <div class="row">
+            <hr class="hr-success" />
+            <ol class="breadcrumb bread-success">
+                <li class="btn btn-success"><i class="fa fa-paw"></i>@Html.ActionLink("Support Services", "SupportServices", "Home", new { @style = "color: white" })</li>
+            </ol>
+        </div>
+        <div class="row">
+            <hr class="hr-info" />
+            <ol class="breadcrumb bread-purple">
+                <li class="btn btn-info"><i class="fa fa-envelope"></i>@Html.ActionLink("Email Helper", "EmailHelper", "Home", new { @style = "color: white" })</li>
+            </ol>
+        </div>
+        <div class="row">
+            <hr class="hr-warning" />
+            <ol class="breadcrumb bread-warning">
+                <a id="modal-2" href="#modal-container-2" data-toggle="modal" class="btn btn-warning"> <i class="fa fa-comments"></i> Teachers' Chat Hub</a>
+                <div class="modal fade" id="modal-container-2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                <h2 class="modal-title" id="myModalLabel">
+                                    Code of Conduct
+                                </h2>
+                            </div>
+                            <div class="modal-body">
+                                <ul>
+                                    <li>
+                                        This channel is made for communication among teachers only.
+                                    </li>
+                                    <li>
+                                        Leaking personal details of children is forbidden.
+                                    </li>
+                                    <li>
+                                        We recommend you to use pseudonym in this channel.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">@Html.ActionLink("Yes", "ChatHub", "Home", new { @style = "color: white" })</button>
                             </div>
                         </div>
                     </div>
-                </ol>
+                </div>
+            </ol>
+        </div>
+        <div class="row">
+            <hr class="hr-doc" />
+            <ol class="breadcrumb bread-doc">
+                <li class="btn btn-doc"><i class="fa fa-file-pdf-o"></i>@Html.ActionLink("Doc Helper", "EmailHelper", "Home", new { @style = "color: white" })</li>
+            </ol>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <div class="row">
+            <div class="square">
+                <div class="line-top"></div>
+                <div class="line-right"></div>
+                <div class="line-bottom"></div>
+                <div class="line-left"></div>
+                <div class="black-mask"></div>
+                <div class="text">
+                    <h1>For Kids | You are doing amazing things</h1>
+                </div>
             </div>
         </div>
-        <div class="col-md-10 column">
-            <br>
-            <div class="container">
+        <div class="row" style="position: relative; bottom: 940px;">
+            <div class="col-md-6">
+                <br>
                 <div id="display"></div>
                 <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
                 <div class="container">
@@ -107,36 +105,34 @@
                         <!-- Conatct Object li.list-group-item.contact will be added here by js -->
                     </ul>
                 </div>
-                <div class="col-md-10 column">
-                    <div class="panel panel-danger">
-                        <div class="panel-heading"></div>
-                        <div class="panel-body" style="height: 530px; word-break: break-all; overflow-y: scroll;">
-                            <div class="row clearfix">
-                                <div id="surveyElement"></div>
-                                <div id="surveyResult"></div>
-                                <script src="~/Scripts/quiz.js"></script>
-                            </div>
-                            <div id="alert-sad" hidden>
-                                <div id="alert1">
-                                    <div id="alert-content1">
-                                        <img class="emoji" src="~/Image/sad.png" width="100px" height="100px">
-                                        <p>Looks like the child may be vulnerable to homelessness</p>
-                                    </div>
+                <div class="panel panel-danger">
+                    <div class="panel-heading"></div>
+                    <div class="panel-body" style="word-break: break-all; overflow-y: scroll;">
+                        <div class="row clearfix">
+                            <div id="surveyElement"></div>
+                            <div id="surveyResult"></div>
+                            <script src="~/Scripts/quiz.js"></script>
+                        </div>
+                        <div id="alert-sad" hidden>
+                            <div id="alert1">
+                                <div id="alert-content1">
+                                    <img class="emoji" src="~/Image/sad.png" width="100px" height="100px">
+                                    <p>Looks like the child may be vulnerable to homelessness</p>
                                 </div>
                             </div>
-                            <div id="alert-happy" hidden>
-                                <div id="alert2">
-                                    <div id="alert-content2">
-                                        <img class="emoji" src="~/Image/happy.png" width="100px" height="100px">
-                                        <p>The child may not be vulnerable to homelessness</p>
-                                    </div>
+                        </div>
+                        <div id="alert-happy" hidden>
+                            <div id="alert2">
+                                <div id="alert-content2">
+                                    <img class="emoji" src="~/Image/happy.png" width="100px" height="100px">
+                                    <p>The child may not be vulnerable to homelessness</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col-md-6"></div>
         </div>
     </div>
 </div>
-

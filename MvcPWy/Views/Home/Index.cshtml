@@ -12,35 +12,26 @@
         <br>
         <br>
         <div class="row">
+            <hr class="hr-danger" />
+            <ol class="breadcrumb bread-danger">
+                <li class="btn btn-danger"><i class="fa fa-flag"></i>@Html.ActionLink("Identify Vulnerable Kids", "IdentifyVulnerableKids", "Home", new { @style = "color: white" })</li>
+            </ol>
+        </div>
+        <div class="row">
             <hr class="hr-primary" />
             <ol class="breadcrumb bread-primary">
                 <li class="btn btn-primary" style="color: white"><i class="fa fa-bar-chart"></i>@Html.ActionLink("EducationalOutcomes", "EducationalOutcomes", "Home", new { @style = "color: white" })</li>
             </ol>
         </div>
         <div class="row">
-            <hr class="hr-danger" />
-            <ol class="breadcrumb bread-danger">
-                @*
-                    <a href="~/IdentifyStudent.cshtml" class="btn btn-danger"><i class="fa fa-flag"></i> Identify Vulnerable Kids </a>
-                *@
-                <li class="btn btn-danger"><i class="fa fa-flag"></i>@Html.ActionLink("Identify Vulnerable Kids", "IdentifyVulnerableKids", "Home", new { @style = "color: white" })</li>
-            </ol>
-        </div>
-        <div class="row">
             <hr class="hr-success" />
             <ol class="breadcrumb bread-success">
-                @*
-                    <a href="~/TeacherHelper.cshtml" class="btn btn-success"><i class="fa fa-paw"></i>Support Services</a>
-                *@
                 <li class="btn btn-success"><i class="fa fa-paw"></i>@Html.ActionLink("Support Services", "SupportServices", "Home", new { @style = "color: white" })</li>
             </ol>
         </div>
         <div class="row">
             <hr class="hr-info" />
             <ol class="breadcrumb bread-purple">
-                @*
-                    <a href="~/ParentsCommunication2.cshtml" class="btn btn-info"><i class="fa fa-envelope"></i> Email Helper</a>
-                *@
                 <li class="btn btn-info"><i class="fa fa-envelope"></i>@Html.ActionLink("Email Helper", "EmailHelper", "Home", new { @style = "color: white" })</li>
             </ol>
         </div>
@@ -81,9 +72,6 @@
         <div class="row">
             <hr class="hr-doc" />
             <ol class="breadcrumb bread-doc">
-                @*
-                    <a href="~/ParentsCommunication2.cshtml" class="btn btn-info"><i class="fa fa-envelope"></i> Email Helper</a>
-                *@
                 <li class="btn btn-doc"><i class="fa fa-file-pdf-o"></i>@Html.ActionLink("Doc Helper", "EmailHelper", "Home", new { @style = "color: white" })</li>
             </ol>
         </div>
@@ -91,90 +79,88 @@
     <div class="col-md-1"></div>
     <div class="col-md-9">
         <div class="row">
-            @*            <div class="logo">
-                    <div class="icon animate">
-                        <span>T</span>
-                        <span>V</span>
-                        <span>-K</span>
-                    </div>
-                    <div class="pipe animate">|</div>
-                    <div class="name animate">Teaching Vulnerable Kids</div>
-                </div>*@
-            <br>
-            <br>
-        </div>
-        <div class="square">
-            <div class="line-top"></div>
-            <div class="line-right"></div>
-            <div class="line-bottom"></div>
-            <div class="line-left"></div>
-            <div class="black-mask"></div>
-            <div class="text">
-                <h1>T-VK | Teaching Vulnerable Kids</h1>
+            <div class="logo">
+                <div class="icon animate">
+                    <span>T</span>
+                    <span>V</span>
+                    <span>K</span>
+                </div>
+                <div class="pipe animate">|</div>
+                <div class="name animate">Teaching Vulnerable Kids</div>
             </div>
-        </div>
-
-        @*<div class="accordian">
-                <ul>
-                    <li>
-                        <div class="image_title">
-                            <a href="#">Wedding 2</a>
-                        </div>
-                        <a href="#">
-                            <img src="http://farm8.staticflickr.com/7435/10067483716_2b6a593ca8.jpg">
-                        </a>
-                    </li>
-                    <li>
-                        <div class="image_title">
-                            <a href="#">Wedding 2</a>
-                        </div>
-                        <a href="#">
-                            <img src="http://farm8.staticflickr.com/7435/10067483716_2b6a593ca8.jpg">
-                        </a>
-                    </li>
-                    <li>
-                        <div class="image_title">
-                            <a href="#">Wedding 1</a>
-                        </div>
-                        <a href="#">
-                            <img src="http://farm3.staticflickr.com/2812/10121061143_e05f1619d7.jpg">
-                        </a>
-                    </li>
-                    <li>
-                        <div class="image_title">
-                            <a href="#">Wedding 2</a>
-                        </div>
-                        <a href="#">
-                            <img src="http://farm8.staticflickr.com/7435/10067483716_2b6a593ca8.jpg">
-                        </a>
-                    </li>
-                    <li>
-                        <div class="image_title">
-                            <a href="#">Wedding 3</a>
-                        </div>
-                        <a href="#">
-                            <img src="http://farm8.staticflickr.com/7310/10065811936_8debcccb71.jpg">
-                        </a>
-                    </li>
-                    <li>
-                        <div class="image_title">
-                            <a href="#">Wedding 4</a>
-                        </div>
-                        <a href="#">
-                            <img src="http://farm4.staticflickr.com/3715/10065692306_705364fa01.jpg">
-                        </a>
-                    </li>
-                    <li>
-                        <div class="image_title">
-                            <a href="#">Wedding 5</a>
-                        </div>
-                        <a href="#">
-                            <img src="http://farm4.staticflickr.com/3667/9759830873_7474bd9fc2.jpg">
-                        </a>
-                    </li>
-                </ul>
+            @*            <div class="square">
+                <div class="line-top"></div>
+                <div class="line-right"></div>
+                <div class="line-bottom"></div>
+                <div class="line-left"></div>
+                <div class="black-mask"></div>
+                <div class="text">
+                    <h1>T-VK | Teaching Vulnerable Kids</h1>
+                </div>
             </div>*@
-        @*<div id="myCarousel" class="carousel slide" data-ride="carousel">
+        </div>
+        <div class="row">
+            @*<div class="accordian">
+                    <ul>
+                        <li>
+                            <div class="image_title">
+                                <a href="#">Wedding 2</a>
+                            </div>
+                            <a href="#">
+                                <img src="http://farm8.staticflickr.com/7435/10067483716_2b6a593ca8.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <div class="image_title">
+                                <a href="#">Wedding 2</a>
+                            </div>
+                            <a href="#">
+                                <img src="http://farm8.staticflickr.com/7435/10067483716_2b6a593ca8.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <div class="image_title">
+                                <a href="#">Wedding 1</a>
+                            </div>
+                            <a href="#">
+                                <img src="http://farm3.staticflickr.com/2812/10121061143_e05f1619d7.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <div class="image_title">
+                                <a href="#">Wedding 2</a>
+                            </div>
+                            <a href="#">
+                                <img src="http://farm8.staticflickr.com/7435/10067483716_2b6a593ca8.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <div class="image_title">
+                                <a href="#">Wedding 3</a>
+                            </div>
+                            <a href="#">
+                                <img src="http://farm8.staticflickr.com/7310/10065811936_8debcccb71.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <div class="image_title">
+                                <a href="#">Wedding 4</a>
+                            </div>
+                            <a href="#">
+                                <img src="http://farm4.staticflickr.com/3715/10065692306_705364fa01.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <div class="image_title">
+                                <a href="#">Wedding 5</a>
+                            </div>
+                            <a href="#">
+                                <img src="http://farm4.staticflickr.com/3667/9759830873_7474bd9fc2.jpg">
+                            </a>
+                        </li>
+                    </ul>
+                </div>*@
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" style="position: relative; top: 140px;">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -206,7 +192,8 @@
                     <span class="glyphicon glyphicon-chevron-right"></span>
                     <span class="sr-only">Next</span>
                 </a>
-            </div>*@
+            </div>
+        </div>
     </div>
 </div>
 

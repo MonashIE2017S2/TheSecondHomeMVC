@@ -212,8 +212,7 @@ namespace MvcPWy.Controllers
                     return View("ForgotPasswordConfirmation");
 
                 var code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
-                var callbackUrl = Url.Action("ResetPassword", "Account", new {userId = user.Id, code},
-                    Request.Url.Scheme);
+                var callbackUrl = Url.Action("ResetPassword", "Account", new {userId = user.Id, code},Request.Url.Scheme);
                 await UserManager.SendEmailAsync(user.Id, "Reset Password",
                     "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
                 TempData["ViewBagLink"] = callbackUrl;
