@@ -33,3 +33,8 @@ textarea { max-width: 280px; }
 .col-md-10 > .container {
     text-align: center;
 }
+.rounded-circle {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}

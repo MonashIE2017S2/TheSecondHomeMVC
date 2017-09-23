@@ -23,3 +23,33 @@ p{
     align-content: center;
     width: 400px;
 }
+.btn-icon {
+    text-align: center;
+}
+
+.btn-round {
+    height: 20px;
+    min-width: 20px;
+    width: 20px;
+}
+
+.blockquote .rounded-circle {
+    width: 200px;
+    height: 200px;
+}
+
+.title {
+    color: #F44336;
+}
+
+.description {
+    color: #FFFFFF;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: normal;
+    text-align:center;
+}
+
+.category{
+    text-align: center;
+}
