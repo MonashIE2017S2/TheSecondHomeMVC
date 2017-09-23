@@ -27,6 +27,7 @@
         </div>
     </div-->
     <div class="row clearfix">
+
         <div class="col-md-2">
             <div class="row">
                 <hr class="hr-danger" />
@@ -94,36 +95,35 @@
             </div>
         </div>
         <div class="col-md-10 column">
-            <br>
-            <br>
-    
-                    <div class="row clearfix">
-                        <div class="col-md-12 column">
-                            <div class="row">
-                                <br>
-                                <div class="col-md-4">
-                                    <div class="blockquote blockquote-primary">
-                                        <img alt="300x200" src="~/Image/Education.jpg" />
-                                        <div class="caption">
-                                            <h3>
-                                                Impact of Homelessness <br /> on Education
-                                            </h3>
-                                            <p>
-                                                <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#my3Modal1">
-                                                    Learn More
-                                                </button>
-                                                <!-- Modal -->
-                                                <div class="modal fade" id="my3Modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                                <h4 class="modal-title" id="myModalLabel2">Education Situation Comparison</h4>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <canvas id="radarChart2" width="1000" height="700"></canvas>
-                                                                <script>
+
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <div class="row">
+                        <br>
+                        <br />
+                        <div class="col-md-4">
+                            <div class="blockquote blockquote-primary">
+                                <img alt="300x200" src="~/Image/Education.jpg" />
+                                <div class="caption">
+                                    <h3>
+                                        Impact of Homelessness <br /> on Education
+                                    </h3>
+                                    <p>
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#my3Modal1">
+                                            Learn More
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="my3Modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="modal-title" id="myModalLabel2">Education Situation Comparison</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <canvas id="radarChart2" width="1000" height="700"></canvas>
+                                                        <script>
                                                                     var ctx = document.getElementById("radarChart2").getContext('2d');
                                                                     Chart.defaults.global.defaultFontFamily = "Lato";
                                                                     Chart.defaults.global.defaultFontSize = 12;
@@ -151,41 +151,41 @@
                                                                             type: 'radar',
                                                                             data: marksData
                                                                         });
-                                                                </script>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                            </div>
-                                                        </div>
+                                                        </script>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                                     </div>
                                                 </div>
-                                            </p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </p>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="blockquote blockquote-primary" >
-                                        <img alt="300x200" src="~/Image/Health.jpg" />
-                                        <div class="caption">
-                                            <h3>
-                                                Impact of Homelessness<br />on Health
-                                            </h3>
-                                            <p>
-                                                <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#my2Modal1">
-                                                    Learn More
-                                                </button>
-                                                <!-- Modal -->
-                                                <div class="modal fade" id="my2Modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                                <h4 class="modal-title" id="myModalLabel2">Health Situation Comparison</h4>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <canvas id="radarChart" width="1000" height="700"></canvas>
-                                                                <script>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="blockquote blockquote-primary">
+                                <img alt="300x200" src="~/Image/Health.jpg" />
+                                <div class="caption">
+                                    <h3>
+                                        Impact of Homelessness<br />on Health
+                                    </h3>
+                                    <p>
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#my2Modal1">
+                                            Learn More
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="my2Modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="modal-title" id="myModalLabel2">Health Situation Comparison</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <canvas id="radarChart" width="1000" height="700"></canvas>
+                                                        <script>
                                                                     var ctx = document.getElementById("radarChart").getContext('2d');
                                                                     Chart.defaults.global.defaultFontFamily = "Lato";
                                                                     Chart.defaults.global.defaultFontSize = 12;
@@ -212,41 +212,41 @@
                                                                             type: 'radar',
                                                                             data: marksData
                                                                         });
-                                                                </script>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                            </div>
-                                                        </div>
+                                                        </script>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                                     </div>
                                                 </div>
-                                            </p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </p>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="blockquote blockquote-primary">
-                                        <img alt="300x200" src="~/Image/census.jpg" />
-                                        <div class="caption">
-                                            <h3>
-                                                Census Data <br />of Homelessness
-                                            </h3>
-                                            <p>
-                                                <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#myModal1">
-                                                    Learn More
-                                                </button>
-                                                <!-- Modal -->
-                                                <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                                <h4 class="modal-title" id="myModalLabel">Census Data Diagram 1</h4>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <canvas id="myChart" width="1000" height="700"></canvas>
-                                                                <script>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="blockquote blockquote-primary">
+                                <img alt="300x200" src="~/Image/census.jpg" />
+                                <div class="caption">
+                                    <h3>
+                                        Census Data <br />of Homelessness
+                                    </h3>
+                                    <p>
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#myModal1">
+                                            Learn More
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="modal-title" id="myModalLabel">Census Data Diagram 1</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <canvas id="myChart" width="1000" height="700"></canvas>
+                                                        <script>
                                                                     var ctx = document.getElementById("myChart").getContext('2d');
                                                                     Chart.defaults.global.defaultFontFamily = "Lato";
                                                                     Chart.defaults.global.defaultFontSize = 12;
@@ -307,27 +307,27 @@
                                                                                 }
                                                                             }
                                                                         });
-                                                                </script>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-default btn-prev">Prev</button>
-                                                                <button type="button" class="btn btn-default btn-next">Next</button>
-                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                            </div>
-                                                        </div>
+                                                        </script>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default btn-prev">Prev</button>
+                                                        <button type="button" class="btn btn-default btn-next">Next</button>
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                                     </div>
                                                 </div>
-                                                <!-- Modal -->
-                                                <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                                <h4 class="modal-title" id="myModalLabel">Census Data Diagram 2</h4>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <canvas id="polarAreaChart" width="1000" height="700"></canvas>
-                                                                <script>
+                                            </div>
+                                        </div>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="modal-title" id="myModalLabel">Census Data Diagram 2</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <canvas id="polarAreaChart" width="1000" height="700"></canvas>
+                                                        <script>
                                                                     var ctx = document.getElementById("polarAreaChart").getContext('2d');
                                                                     Chart.defaults.global.defaultFontFamily = "Lato";
                                                                     Chart.defaults.global.defaultFontSize = 12;
@@ -366,27 +366,27 @@
                                                                             data: birdsData,
                                                                             options: chartOptions
                                                                         });
-                                                                </script>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-default btn-prev">Prev</button>
-                                                                <button type="button" class="btn btn-default btn-next">Next</button>
-                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                            </div>
-                                                        </div>
+                                                        </script>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default btn-prev">Prev</button>
+                                                        <button type="button" class="btn btn-default btn-next">Next</button>
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                                     </div>
                                                 </div>
-                                                <!-- Modal -->
-                                                <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                                <h4 class="modal-title" id="myModalLabel">Census Data Diagram 3</h4>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <canvas id="donutChart2" width="1000" height="700"></canvas>
-                                                                <script>
+                                            </div>
+                                        </div>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="modal-title" id="myModalLabel">Census Data Diagram 3</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <canvas id="donutChart2" width="1000" height="700"></canvas>
+                                                        <script>
                                                                     var oilCanvas = document.getElementById("donutChart2");
 
                                                                     Chart.defaults.global.defaultFontFamily = "Lato";
@@ -429,27 +429,27 @@
                                                                             data: oilData,
                                                                             options: chartOptions
                                                                         });
-                                                                </script>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-default btn-prev">Prev</button>
-                                                                <button type="button" class="btn btn-default btn-next">Next</button>
-                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                            </div>
-                                                        </div>
+                                                        </script>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default btn-prev">Prev</button>
+                                                        <button type="button" class="btn btn-default btn-next">Next</button>
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                                     </div>
                                                 </div>
-                                                <!-- Modal -->
-                                                <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                                <h4 class="modal-title" id="myModalLabel">Census Data Diagram 4</h4>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <canvas id="donutChart" width="1000" height="700"></canvas>
-                                                                <script>
+                                            </div>
+                                        </div>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="modal-title" id="myModalLabel">Census Data Diagram 4</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <canvas id="donutChart" width="1000" height="700"></canvas>
+                                                        <script>
                                                                     var oilCanvas = document.getElementById("donutChart");
 
                                                                     Chart.defaults.global.defaultFontFamily = "Lato";
@@ -505,17 +505,17 @@
                                                                             data: oilData,
                                                                             options: chartOptions
                                                                         });
-                                                                </script>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-default btn-prev">Prev</button>
-                                                                <button type="button" class="btn btn-default btn-next">Next</button>
-                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                            </div>
-                                                        </div>
+                                                        </script>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default btn-prev">Prev</button>
+                                                        <button type="button" class="btn btn-default btn-next">Next</button>
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                                     </div>
                                                 </div>
-                                                <script>
+                                            </div>
+                                        </div>
+                                        <script>
                                                                     $("div[id^='myModal']").each(function () {
 
                                                                         var currentModal = $(this);
@@ -534,16 +534,20 @@
 
                                                                     });
 
-                                                </script>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>                                
-                                
+                                        </script>
+                                    </p>
+                                </div>
                             </div>
                         </div>
+
                     </div>
-                
+
+
+                </div>
+            </div>
+           
         </div>
+
+        
     </div>
 </div>
