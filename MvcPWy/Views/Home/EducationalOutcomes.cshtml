@@ -7,7 +7,7 @@
     <script src="~/Scripts/Modals.js"></script>
 </head>
 <div class="container">
-    <div class="row clearfix">
+    <!--div class="row clearfix">
         <div class="col-md-2 column">
         </div>
         <div class="col-md-4 column"></div>
@@ -25,35 +25,31 @@
                 </g>
             </svg>
         </div>
-    </div>
+    </div-->
     <div class="row clearfix">
         <div class="col-md-2">
-            <br>
-            <br>
-            <br>
-            <br>
             <div class="row">
                 <hr class="hr-danger" />
                 <ol class="breadcrumb bread-danger">
-                    <li class="btn btn-danger"><i class="fa fa-flag"></i>@Html.ActionLink("Identify Vulnerable Kids", "IdentifyVulnerableKids", "Home", new { @style = "color: white" })</li>
+                    <li class="btn btn-danger"><i class="fa fa-flag"> </i> @Html.ActionLink("Identify Vulnerable Kids", "IdentifyVulnerableKids", "Home", new { @style = "color: white" })</li>
                 </ol>
             </div>
             <div class="row">
                 <hr class="hr-primary" />
                 <ol class="breadcrumb bread-primary">
-                    <li class="btn btn-primary" style="color: white"><i class="fa fa-bar-chart"></i>@Html.ActionLink("EducationalOutcomes", "EducationalOutcomes", "Home", new { @style = "color: white" })</li>
+                    <li class="btn btn-primary" style="color: white"><i class="fa fa-bar-chart"></i> @Html.ActionLink("Educational Outcomes", "EducationalOutcomes", "Home", new { @style = "color: white" })</li>
                 </ol>
             </div>
             <div class="row">
                 <hr class="hr-success" />
                 <ol class="breadcrumb bread-success">
-                    <li class="btn btn-success"><i class="fa fa-paw"></i>@Html.ActionLink("Support Services", "SupportServices", "Home", new { @style = "color: white" })</li>
+                    <li class="btn btn-success"><i class="fa fa-paw"></i> @Html.ActionLink("Support Services", "SupportServices", "Home", new { @style = "color: white" })</li>
                 </ol>
             </div>
             <div class="row">
                 <hr class="hr-info" />
                 <ol class="breadcrumb bread-purple">
-                    <li class="btn btn-info"><i class="fa fa-envelope"></i>@Html.ActionLink("Email Helper", "EmailHelper", "Home", new { @style = "color: white" })</li>
+                    <li class="btn btn-info"><i class="fa fa-envelope"></i> @Html.ActionLink("Email Helper", "EmailHelper", "Home", new { @style = "color: white" })</li>
                 </ol>
             </div>
             <div class="row">
@@ -93,31 +89,152 @@
             <div class="row">
                 <hr class="hr-doc" />
                 <ol class="breadcrumb bread-doc">
-                    <li class="btn btn-doc"><i class="fa fa-file-pdf-o"></i>@Html.ActionLink("Doc Helper", "EmailHelper", "Home", new { @style = "color: white" })</li>
+                    <li class="btn btn-doc"><i class="fa fa-file-pdf-o"></i> @Html.ActionLink("Education Plan", "EmailHelper", "Home", new { @style = "color: white" })</li>
                 </ol>
             </div>
         </div>
         <div class="col-md-10 column">
             <br>
             <br>
-            <div class="panel panel-primary">
-                <div class="panel-heading"></div>
-                <div class="panel-body" style="height: 430px; word-break: break-all; overflow-y: scroll;">
+    
                     <div class="row clearfix">
                         <div class="col-md-12 column">
                             <div class="row">
                                 <br>
                                 <div class="col-md-4">
-                                    <div class="thumbnail">
+                                    <div class="blockquote blockquote-primary">
+                                        <img alt="300x200" src="~/Image/Education.jpg" />
+                                        <div class="caption">
+                                            <h3>
+                                                Impact of Homelessness <br /> on Education
+                                            </h3>
+                                            <p>
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#my3Modal1">
+                                                    Learn More
+                                                </button>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="my3Modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                <h4 class="modal-title" id="myModalLabel2">Education Situation Comparison</h4>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <canvas id="radarChart2" width="1000" height="700"></canvas>
+                                                                <script>
+                                                                    var ctx = document.getElementById("radarChart2").getContext('2d');
+                                                                    Chart.defaults.global.defaultFontFamily = "Lato";
+                                                                    Chart.defaults.global.defaultFontSize = 12;
+                                                                    var marksData = {
+                                                                        labels: [
+                                                                            "Emotion Isolation", "Establishing and Maintaining Friendships",
+                                                                            "Discrimination in the schoolyard", "Suffering an amount fo stress",
+                                                                            "Reduced concentration skills", "Academic and learning delays",
+                                                                            "Absenteeism", "Dropout"
+                                                                        ],
+                                                                        datasets: [
+                                                                            {
+                                                                                label: "Education Condition of Normal Children",
+                                                                                backgroundColor: "rgba(200,0,0,0.2)",
+                                                                                data: [75, 80, 80, 80, 90, 70, 80, 90]
+                                                                            }, {
+                                                                                label: "Education Condition of Children Experiencing Homelessness",
+                                                                                backgroundColor: "rgba(0,0,200,0.2)",
+                                                                                data: [55, 70, 75, 75, 70, 70, 70, 40]
+                                                                            }
+                                                                        ]
+                                                                    };
+                                                                    var radarChart = new Chart(ctx,
+                                                                        {
+                                                                            type: 'radar',
+                                                                            data: marksData
+                                                                        });
+                                                                </script>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="blockquote blockquote-primary" >
+                                        <img alt="300x200" src="~/Image/Health.jpg" />
+                                        <div class="caption">
+                                            <h3>
+                                                Impact of Homelessness<br />on Health
+                                            </h3>
+                                            <p>
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#my2Modal1">
+                                                    Learn More
+                                                </button>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="my2Modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                <h4 class="modal-title" id="myModalLabel2">Health Situation Comparison</h4>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <canvas id="radarChart" width="1000" height="700"></canvas>
+                                                                <script>
+                                                                    var ctx = document.getElementById("radarChart").getContext('2d');
+                                                                    Chart.defaults.global.defaultFontFamily = "Lato";
+                                                                    Chart.defaults.global.defaultFontSize = 12;
+                                                                    var marksData = {
+                                                                        labels: [
+                                                                            "Developmental Delays", "Nutritional Deficits", "Asthma",
+                                                                            "Infectious Illness", "Gastrointestinal Problems",
+                                                                            "Anxiety and depression"
+                                                                        ],
+                                                                        datasets: [
+                                                                            {
+                                                                                label: "Health Condition of Normal Children",
+                                                                                backgroundColor: "rgba(200,0,0,0.2)",
+                                                                                data: [100, 90, 80, 80, 90, 90]
+                                                                            }, {
+                                                                                label: "Health Condition of Children Experiencing Homelessness",
+                                                                                backgroundColor: "rgba(0,0,200,0.2)",
+                                                                                data: [70, 60, 70, 60, 70, 50]
+                                                                            }
+                                                                        ]
+                                                                    };
+                                                                    var radarChart = new Chart(ctx,
+                                                                        {
+                                                                            type: 'radar',
+                                                                            data: marksData
+                                                                        });
+                                                                </script>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="blockquote blockquote-primary">
                                         <img alt="300x200" src="~/Image/census.jpg" />
                                         <div class="caption">
                                             <h3>
-                                                Census Data of Homelessness
+                                                Census Data <br />of Homelessness
                                             </h3>
                                             <p>
                                                 <!-- Button trigger modal -->
                                                 <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#myModal1">
-                                                    Check
+                                                    Learn More
                                                 </button>
                                                 <!-- Modal -->
                                                 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -421,135 +538,12 @@
                                             </p>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="thumbnail">
-                                        <img alt="300x200" src="~/Image/Health.jpg" />
-                                        <div class="caption">
-                                            <h3>
-                                                Health Situation of Youth Homelessness
-                                            </h3>
-                                            <p>
-                                                <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#my2Modal1">
-                                                    Check
-                                                </button>
-                                                <!-- Modal -->
-                                                <div class="modal fade" id="my2Modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                                <h4 class="modal-title" id="myModalLabel2">Health Situation Comparison</h4>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <canvas id="radarChart" width="1000" height="700"></canvas>
-                                                                <script>
-                                                                    var ctx = document.getElementById("radarChart").getContext('2d');
-                                                                    Chart.defaults.global.defaultFontFamily = "Lato";
-                                                                    Chart.defaults.global.defaultFontSize = 12;
-                                                                    var marksData = {
-                                                                        labels: [
-                                                                            "Developmental Delays", "Nutritional Deficits", "Asthma",
-                                                                            "Infectious Illness", "Gastrointestinal Problems",
-                                                                            "Anxiety and depression"
-                                                                        ],
-                                                                        datasets: [
-                                                                            {
-                                                                                label: "Health Condition of Normal Children",
-                                                                                backgroundColor: "rgba(200,0,0,0.2)",
-                                                                                data: [100, 90, 80, 80, 90, 90]
-                                                                            }, {
-                                                                                label: "Health Condition of Children Experiencing Homelessness",
-                                                                                backgroundColor: "rgba(0,0,200,0.2)",
-                                                                                data: [70, 60, 70, 60, 70, 50]
-                                                                            }
-                                                                        ]
-                                                                    };
-                                                                    var radarChart = new Chart(ctx,
-                                                                        {
-                                                                            type: 'radar',
-                                                                            data: marksData
-                                                                        });
-                                                                </script>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="thumbnail">
-                                        <img alt="300x200" src="~/Image/Education.jpg" />
-                                        <div class="caption">
-                                            <h3>
-                                                Education Situation of Youth Homelessness
-                                            </h3>
-                                            <p>
-                                                <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#my3Modal1">
-                                                    Check
-                                                </button>
-                                                <!-- Modal -->
-                                                <div class="modal fade" id="my3Modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                                <h4 class="modal-title" id="myModalLabel2">Education Situation Comparison</h4>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <canvas id="radarChart2" width="1000" height="700"></canvas>
-                                                                <script>
-                                                                    var ctx = document.getElementById("radarChart2").getContext('2d');
-                                                                    Chart.defaults.global.defaultFontFamily = "Lato";
-                                                                    Chart.defaults.global.defaultFontSize = 12;
-                                                                    var marksData = {
-                                                                        labels: [
-                                                                            "Emotion Isolation", "Establishing and Maintaining Friendships",
-                                                                            "Discrimination in the schoolyard", "Suffering an amount fo stress",
-                                                                            "Reduced concentration skills", "Academic and learning delays",
-                                                                            "Absenteeism", "Dropout"
-                                                                        ],
-                                                                        datasets: [
-                                                                            {
-                                                                                label: "Education Condition of Normal Children",
-                                                                                backgroundColor: "rgba(200,0,0,0.2)",
-                                                                                data: [75, 80, 80, 80, 90, 70, 80, 90]
-                                                                            }, {
-                                                                                label: "Education Condition of Children Experiencing Homelessness",
-                                                                                backgroundColor: "rgba(0,0,200,0.2)",
-                                                                                data: [55, 70, 75, 75, 70, 70, 70, 40]
-                                                                            }
-                                                                        ]
-                                                                    };
-                                                                    var radarChart = new Chart(ctx,
-                                                                        {
-                                                                            type: 'radar',
-                                                                            data: marksData
-                                                                        });
-                                                                </script>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+                                </div>                                
+                                
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                
         </div>
     </div>
 </div>

@@ -1,9 +1,12 @@
 ﻿body {
     width: 100%;
-    min-height: 100%;
+    height: 100%;
     margin: 0;
-    overflow: hidden;
+    
 }
+
+
+
 
 canvas {
     z-index: 99;
@@ -127,5 +130,36 @@ canvas {
     -webkit-animation: anim 1000s linear infinite forwards;
     animation: anim 1000s linear infinite forwards;
 }
+html{
+    min-height: 100%;
+}
+
 body {
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../Image/bg.jpg");
+    background-size: cover;
+}
+
+.blockquote {
+    border-left: none;
+    border: 1px solid #888;
+    padding: 10px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    min-height: 350px;
+}
+    .blockquote.blockquote-primary {
+        border-color: #0D47A1;
+        color: #0D47A1;
+        background: rgba(33,33,33,.8);
+        color: white;
+    }
+
+.blockquote img {
+    height: 200px;
+    width: 300px;
+    max-width:100%;
+    max-height: 50%;
 }

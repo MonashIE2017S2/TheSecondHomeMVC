@@ -21,3 +21,15 @@
 input,
 select,
 textarea { max-width: 280px; }
+
+.row>.breadcrumb>.btn{
+    width: 180px;
+}
+
+.container {
+    text-align: center;
+}
+
+.col-md-10 > .container {
+    text-align: center;
+}
