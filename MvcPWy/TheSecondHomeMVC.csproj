@@ -272,12 +272,16 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Image\Banner.jpg" />
+    <Content Include="Image\bg.jpg" />
+    <Content Include="Image\bg2.jpg" />
+    <Content Include="Image\bg3.jpg" />
     <Content Include="Image\cary.PNG" />
     <Content Include="Image\census.jpg" />
     <Content Include="Image\Education.jpg" />
     <Content Include="Image\han.PNG" />
     <Content Include="Image\happy.png" />
     <Content Include="Image\Health.jpg" />
+    <Content Include="Image\logo.ico" />
     <Content Include="Image\logo.png" />
     <Content Include="Image\neutral.png" />
     <Content Include="Image\roshan.PNG" />
@@ -335,7 +339,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\Modals.js" />
+    <Content Include="Scripts\ModalSwitch.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\quiz.js" />
     <Content Include="Scripts\respond.js" />

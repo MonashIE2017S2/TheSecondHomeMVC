@@ -33,34 +33,49 @@ database.ref().on("value", function (snap) {
     window.survey = new Survey.Model({
         questions: [
             {
-                type: "radiogroup", name: "kidGender", title: "Please select the gender of the child", isRequired: true,
-                colCount: 4, choices: ["Boy", "Girl"]
+                type: "radiogroup", name: "kidGender", title: "What is the attendance status of this kid?", isRequired: true,
+                colCount: 6, choices: ["Excellent(95%)", "Good(85%)", "Fair(75%)", "Not Good(60% or below)"]
             },
             {
-                type: "dropdown", name: "Age", title: "What is the age of the child?", isRequired: true, colCount: 0,
-                choices: ["0-6", "6-10", "10-14", "14-18"]
+                type: "radiogroup", name: "kidGender", title: "What is the grade status of this kid?", isRequired: true,
+                colCount: 6, choices: ["Excellent(TOP 15%)", "Good(TOP 30%)", "Fair(TOP 60%)", "Not Good(Below 60%)"]
             },
             {
-                type: "dropdown", name: "Friends", title: "How many friends do the child have?", isRequired: false, colCount: 0,
-                choices: ["Few Friend", "One or Two Friends", "Many Friends", "Not Sure"]
+                type: "radiogroup", name: "kidGender", title: "Does the kid have a record of significant bad behavior?", isRequired: true,
+                colCount: 6, choices: ["Many records", "Just one", "Never"]
             },
             {
-                type: "checkbox", name: "Sports", title: "Have you noticed that the child engaged in any sports?", isRequired: false,
-                colCount: 4, choices: ["Footy", "Basketball", "Tennis", "Swimming", "Skating", "Cycling"]
+                type: "radiogroup", name: "kidGender", title: "What is the gender of this kid?", isRequired: true,
+                colCount: 6, choices: ["Male","Female"]
             },
             {
-                type: "dropdown", name: "SocialEvents", title: "Does the child participate in community or church activities?", isRequired: false, colCount: 0,
-                choices: ["Never", "Occasionally", "Frequently", "Not Sure"]
+                type: "radiogroup", name: "Suburb", title: "Please select the area where your school is located.", isRequired: true, colCount: 6,
+                choices: ["North-Eastern Victoria", "North-Western Victoria","South-Eastern Victoria","South-Western Victoria"]
             },
             {
-                type: "rating", name: "Emotion", title: "What do you think of the child's daily emotion?",
-                mininumRateDescription: "Depressed", maximumRateDescription: "Optimistic"
+                type: "radiogroup", name: "kidGender", title: "What type of school are you work in?", isRequired: true,
+                colCount: 6, choices: ["Government", "Non-Government","Catholic","Indepentent"]
             },
             {
-                type: "dropdown", name: "Suburb", title: "Choose your suburb", isRequired: false, colCount: 0,
+                type: "dropdown", name: "Suburb", title: "Please select the suburb where your school is located.", isRequired: true, colCount: 0,
                 choices: keys
+            },
+            {
+                type: "radiogroup", name: "Age", title: "Have you ever found any sign of domestic violence in the body of this kid?", isRequired: true, colCount: 0,
+                choices: ["Yes", "No"]
+            },
+            {
+                type: "radiogroup", name: "Age", title: "What is the family status of this kid?", isRequired: true, colCount: 0,
+                choices: ["Single-Parent", "Two-parent Family", "Foster Family"]
+            },
+            {
+                type: "dropdown", name: "Friends", title: "How many friends do the child have?", isRequired: true, colCount: 0,
+                choices: ["Few Friend", "One or Two Friends", "Many Friends"]
+            },
+            {
+                type: "radiogroup", name: "Sports", title: "Have you noticed that the child engaged in any sports?", isRequired: true,
+                colCount: 4, choices: ["Yes", "Not Sure", "No"]
             }
-
         ]
     });
 
@@ -89,7 +104,7 @@ database.ref().on("value", function (snap) {
 
 
         //Calculate vulnerability of child
-        if ((parseInt(emotion) <= 2 && (friends == "Few Friend" || friends == "Not Sure" || friends == "One or Two Friends") )|| nillIncomePercent < 20) {
+        if ((parseInt(emotion) <= 2 && (friends === "Few Friend" || friends === "Not Sure" || friends === "One or Two Friends") )|| nillIncomePercent < 20) {
 
             $alertSad.show();
 

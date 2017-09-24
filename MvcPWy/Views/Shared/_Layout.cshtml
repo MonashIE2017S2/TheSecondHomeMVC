@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - TVK</title>
     @Styles.Render("~/Content/Site.css")
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    @Scripts.Render("~/Scripts/modernizr")
+    @*   @Scripts.Render("~/Scripts/modernizr")
     @Scripts.Render("~/Scripts/jquery")
-    @Scripts.Render("~/Scripts/bootstrap")
+    @Scripts.Render("~/Scripts/bootstrap")*@
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
     <link rel="stylesheet" href="~/Content/Animation.css">
     <script src="~/Scripts/jquery-3.2.1.js"></script>
     <script src="~/Scripts/bootstrap.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css">
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <script src="~/Scripts/Modals.js"></script>
+    <link href="~/Image/logo.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="~/Content/BGbird.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <style>
@@ -140,7 +141,8 @@
     </style>
 </head>
 <body>
-    <canvas id="canv" style="z-index: -10"></canvas>
+    <canvas id="canv" style="z-index: -10;position: absolute;top: 0; left: 0;bottom: 0; right: 0; 
+    background: -webkit-linear-gradient(#B7B0E3, #FFD3D6);background: linear-gradient(#B7B0E3, #FFD3D6);"></canvas>
     <div class="sky" style="z-index: -1">
         <div class="clouds" style="z-index: -1">
             <div class="c1 one"></div>
@@ -163,10 +165,8 @@
             <section class="content-wrapper main-content clear-fix">
                 @RenderBody()
                 <hr />
-                <footer>
-                    @*
-                        <p>&copy; @DateTime.Now.Year - Team-Y-Nots</p>
-                    *@
+                <footer style="text-align: right;">
+                        <p style="font-weight: bold">&copy; @DateTime.Now.Year -Team-Y-Nots</p>
                 </footer>
             </section>
         </div>
